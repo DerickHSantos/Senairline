@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Aula 03</title>
+    <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
+      <script>
+         $(document).ready(function() {
+            $('select').material_select();
+         });
+      </script>
+</head>
+
+<body>
+  <img src="senairline.png" style="width: 20%; margin-left: auto; margin-right: auto; display: block; min-width: 200px;">
+    <div id="formulario">
+        <p class="branco">Insira seu Nome Completo:</p>
+        <input id="nome" type="text" placeholder="Nome Completo" maxlength="255">
+         
+        <p class="branco">Insira sua Data de Nascimento:</p>
+        <input id="nascimento" type="date">
+
+        <p class="branco">Insira o Nome Completo de sua Mãe:</p>
+        <input id="mae" type="text" placeholder="Nome Completo da Mãe" maxlength="255">
+         
+        <p class="branco">Insira o Nome Completo de seu Pai:</p>
+        <input id="pai" type="text" placeholder="Nome Completo do Pai" maxlength="255">
+
+        <p class="branco">Selecione o Tipo de Viagem:</p>
+        
+        <div class="input-field col s12">
+            <select id="viagem">
+                <option value="0" disabled selected>Escolha uma opção</option>
+                <option value="Amazônia">Amazônia</option>
+                <option value="Nordeste">Nordeste</option>
+                <option value="Praia">Praia</option>
+                <option value="Pantanal">Pantanal</option>
+                <option value="Rústico">Rústico</option>
+                <option value="Ecológico">Ecológico</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Indivulgável">Indivulgável</option>
+                <option value="Naturista">Naturista</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+
+		<p class="branco">Temporada:</p>
+        <form action="#">
+            <p>
+              <label>
+                <input name="group1" type="radio" value="Alta" checked />
+                <span style="color: #f6f6f6">Alta</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" value="Baixa"/>
+                <span style="color: #f6f6f6">Baixa</span>
+              </label>
+            </p>
+          </form>
+
+		  <p class="branco">Adicionais:</p>
+			<form action="#"></form>
+				<p>
+					<label>
+			  	<input type="checkbox" class="filled-in" id="idosos"/>
+				  <span>Guia para Idosos</span><br>
+					<label>
+					<input type="checkbox" class="filled-in" id="grupos"/>
+					<span>Grupos</span><br>
+					<label>
+					<input type="checkbox" class="filled-in" id="individual"/>
+					<span>Individual</span><br>
+					<label>
+					<input type="checkbox" class="filled-in" id="lua"/>
+					<span>Lua de Mel</span><br>
+					<label>
+					<input type="checkbox" class="filled-in" id="familia"/>
+					<span>Família</span><br>
+					<label>
+					<input type="checkbox" class="filled-in branco" id="outro"/>
+					<span>Outro</span>
+					</label>
+		  		</p>
+			</form>
+
+        <p class="branco">Insira seu Número de Telefone:</p>
+        <input id="telefone" type="text" placeholder="(00) 00000-0000" maxlength="15" minlength="15">
+         
+        <p class="branco">Insira seu E-mail:</p>
+        <input id="email" type="text" placeholder="seu@email.com" maxlength="255">
+
+		<button class="waves-effect waves-light btn" onclick="confirmar()">Enviar</button>
+    <button class="waves-effect waves-light btn" onclick="relatorio()">Gerar relatório</button>
+		<p id="result" class="branco"></p>
+    </div>
+
+    <div id="relatorio" style="display: none;">
+      <h1 style="font-size: 50px; color:aliceblue;">Relatório de Cliente</h1>
+      <p id="relatorio_total"></p>
+      <button class="waves-effect waves-light btn" onclick="cadastro()">Voltar para o cadastro</button>
+
+    </div>
+    <img src="aviao.png" id="aviao" style="bottom: 2%">
+
+	<script src="script.js"></script>
+</body>
+</html>

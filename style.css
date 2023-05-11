@@ -1,0 +1,40 @@
+html{
+    background-image: linear-gradient(to top right, #BF3475, #EE6C45, #FFE58A);
+    height: 167vh;
+    width: 100%;
+    padding: 3%;
+}
+
+#aviao{
+    position: fixed;
+    bottom: 2%;
+    left: 1.7%;
+    max-width: 69px;
+    color: #000000;
+    opacity: 50%;
+}
+
+.preto{
+    color: #060606;
+}
+
+.branco{
+    color: #f6f6f6;
+    font-size: large;
+    font-weight: 500;
+}
+
+span{
+    color: #f6f6f6;
+}
+
+#relatorio_total{
+    padding-left: 1.2%;
+    background-color: #060606;
+    color: aliceblue;
+}
+
+#formulario{
+    padding: 1%;
+    
+}
